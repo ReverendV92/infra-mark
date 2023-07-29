@@ -1,0 +1,43 @@
+
+vertexlitgeneric
+{
+
+	$basetexture models/jessev92/characters/highvis/highvis_body
+	$bumpmap models/cstrike/t_leet_normal
+
+	$selfillum 1
+	$selfillummask models/jessev92/characters/highvis/highvis_body_illummask
+
+	$nocull 1
+
+	$halflambert 1
+	$ambientocclusion 1
+	$ambientocclcolor "{ 175 150 25 }"
+	$lightwarptexture dev/identitylightwarp
+
+	$phong 1
+	$phongexponenttexture models/jessev92/characters/highvis/highvis_body_reference
+	$phongboost 1
+	$phongfresnelranges "[ 0 0.5 1 ]"
+	$phongtint "{ 25 5 0 }"
+	$phongwarptexture models/jessev92/characters/highvis/highvis_body_warp
+
+	$rimlight 1
+	$rimlightexponent 75
+	$rimlightboost 0.1
+
+	$color2 "[ 1 1 1 ]"
+	Proxies
+	{
+
+		Equals
+		{
+
+			srcvar1 $color2 // disable proxies
+			resultVar $color2 // the shader parameter to be manipulated
+
+		}
+
+	}
+
+}

@@ -1,0 +1,29 @@
+
+vertexlitgeneric
+{
+
+	$basetexture models/jessev92/characters/highvis/highvis_body
+	$bumpmap models/cstrike/t_leet_normal
+	$lightwarptexture dev/identitylightwarp
+
+	$nocull 1
+
+	$halflambert 1
+	$ambientocclusion 1
+	$ambientocclcolor "{ 175 150 25 }"
+
+	$color2 "[ 1 1 1 ]"
+	Proxies
+	{
+
+		Equals
+		{
+
+			srcvar1 $color2 // disable proxies
+			resultVar $color2 // the shader parameter to be manipulated
+
+		}
+
+	}
+
+}

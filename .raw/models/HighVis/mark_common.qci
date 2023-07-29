@@ -1,0 +1,40 @@
+
+$bodygroup "Body" 
+{
+	studio common/body_highvis_new
+	studio common/body_highvis_proxy
+}
+
+$bodygroup "Hard Hat" 
+{
+	studio mark/hardhat_ncg
+	studio mark/hardhat_fcn
+	studio mark/hardhat
+	studio mark/hardhat_proxy
+	blank
+}
+
+$bodygroup "Sunglasses" 
+{
+	blank
+	studio mark/sunglasses
+}
+
+$bodygroup "Pouches" 
+{
+	studio common/body_pouches
+	blank
+}
+
+$model "Hands" common/hands_white
+
+$cdmaterials models/jessev92/characters/highvis/mark
+$cdmaterials models/jessev92/characters/highvis
+$cdmaterials models/jessev92/characters/hl2/male/facemaps
+$cdmaterials models/jessev92/characters/hl2
+$cdmaterials models/jessev92/characters/gmod/hands
+$cdmaterials models/jessev92/characters/eyes
+$cdmaterials models/infra/props_clutter
+$cdmaterials models/weapons/c_arms_citizen
+// $cdmaterials models/jessev92/characters
+// $cdmaterials models/jessev92/characters/hl2/male

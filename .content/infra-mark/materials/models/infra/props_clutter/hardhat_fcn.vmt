@@ -1,0 +1,41 @@
+
+vertexlitgeneric
+{
+
+	$basetexture models/infra/props_clutter/hardhat_fcn
+	$bumpmap dev/bump_normal
+	$lightwarptexture dev/identitylightwarp
+
+	$halflambert 1
+	$ambientocclusion 1
+	$ambientocclcolor "{ 235 235 235 }"
+
+	$phong 1
+	$phongexponent 5
+	$phongboost 1
+	$phongfresnelranges "[ 0.1 0.1 0.1 ]"
+
+	$rimlight 1
+	$rimlightexponent 75
+	$rimlightboost 0.1
+
+	$detail detail/metal_detail_01
+	$detailscale 8
+	$detailblendmode 0
+	$detailblendfactor 0.15
+
+	$color2 "[ 1 1 1 ]"
+	Proxies
+	{
+
+		Equals
+		{
+
+			srcvar1 $color2 // disable proxies
+			resultVar $color2 // the shader parameter to be manipulated
+
+		}
+
+	}
+
+}

@@ -1,0 +1,90 @@
+$surfaceprop "flesh"
+
+$collisionjoints "humans\male\ragdoll_tie"
+{
+	$mass 90
+	$inertia 10
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone "valvebiped.bip01_pelvis"
+
+
+	$jointconstrain "valvebiped.bip01_spine2" x limit -70 70 0
+	$jointconstrain "valvebiped.bip01_spine2" y limit -25 25 0
+	$jointconstrain "valvebiped.bip01_spine2" z limit -65 95 0
+
+	$jointconstrain "tie1" x limit 0 0 0
+	$jointconstrain "tie1" y limit -100 100 0
+	$jointconstrain "tie1" z limit 0 115 0
+
+	$jointconstrain "valvebiped.bip01_l_thigh" x limit -40 40 0
+	$jointconstrain "valvebiped.bip01_l_thigh" y limit -55 90 0
+	$jointconstrain "valvebiped.bip01_l_thigh" z limit -70 120 0
+
+	$jointconstrain "valvebiped.bip01_l_calf" x limit -30 30 0
+	$jointconstrain "valvebiped.bip01_l_calf" y limit -12 12 0
+	$jointconstrain "valvebiped.bip01_l_calf" z limit -12 145 0
+
+	$jointconstrain "tie2" x limit 0 0 0
+	$jointconstrain "tie2" y limit -40 40 0
+	$jointconstrain "tie2" z limit -110 120 0
+
+	$jointconstrain "valvebiped.bip01_r_thigh" x limit -40 40 0
+	$jointconstrain "valvebiped.bip01_r_thigh" y limit -90 55 0
+	$jointconstrain "valvebiped.bip01_r_thigh" z limit -70 125 0
+
+	$jointconstrain "valvebiped.bip01_r_calf" x limit -30 30 0
+	$jointconstrain "valvebiped.bip01_r_calf" y limit -12 12 0
+	$jointconstrain "valvebiped.bip01_r_calf" z limit -12 145 0
+
+	$jointconstrain "valvebiped.bip01_r_foot" x limit -40 40 0
+	$jointconstrain "valvebiped.bip01_r_foot" y limit -40 40 0
+	$jointconstrain "valvebiped.bip01_r_foot" z limit -55 35 0
+
+	$jointconstrain "valvebiped.bip01_l_clavicle" x limit 0 0 0
+	$jointconstrain "valvebiped.bip01_l_clavicle" y limit 0 0 0
+	$jointconstrain "valvebiped.bip01_l_clavicle" z limit 0 0 0
+
+	$jointconstrain "valvebiped.bip01_l_upperarm" x limit -40 40 0
+	$jointconstrain "valvebiped.bip01_l_upperarm" y limit -115 150 0
+	$jointconstrain "valvebiped.bip01_l_upperarm" z limit -135 135 0
+
+	$jointconstrain "valvebiped.bip01_l_forearm" x limit -30 30 0
+	$jointconstrain "valvebiped.bip01_l_forearm" y limit -60 60 0
+	$jointconstrain "valvebiped.bip01_l_forearm" z limit -140 30 0
+
+	$jointconstrain "valvebiped.bip01_l_hand" x limit -60 60 0
+	$jointconstrain "valvebiped.bip01_l_hand" y limit -60 60 0
+	$jointconstrain "valvebiped.bip01_l_hand" z limit -70 70 0
+
+	$jointconstrain "valvebiped.bip01_r_clavicle" x limit 0 0 0
+	$jointconstrain "valvebiped.bip01_r_clavicle" y limit 0 0 0
+	$jointconstrain "valvebiped.bip01_r_clavicle" z limit 0 0 0
+
+	$jointconstrain "valvebiped.bip01_r_upperarm" x limit -40 40 0
+	$jointconstrain "valvebiped.bip01_r_upperarm" y limit -150 115 0
+	$jointconstrain "valvebiped.bip01_r_upperarm" z limit -135 135 0
+
+	$jointconstrain "valvebiped.bip01_r_forearm" x limit -30 30 0
+	$jointconstrain "valvebiped.bip01_r_forearm" y limit -60 60 0
+	$jointconstrain "valvebiped.bip01_r_forearm" z limit -140 30 0
+
+	$jointconstrain "valvebiped.bip01_r_hand" x limit -60 60 0
+	$jointconstrain "valvebiped.bip01_r_hand" y limit -60 60 0
+	$jointconstrain "valvebiped.bip01_r_hand" z limit -70 70 0
+
+	$jointconstrain "valvebiped.bip01_head1" x limit -70 70 0
+	$jointconstrain "valvebiped.bip01_head1" y limit -25 25 0
+	$jointconstrain "valvebiped.bip01_head1" z limit -65 40 0
+
+	$jointconstrain "tie3" x limit 0 0 0
+	$jointconstrain "tie3" y limit -40 40 0
+	$jointconstrain "tie3" z limit -110 120 0
+
+	$jointconstrain "valvebiped.bip01_l_foot" x limit -40 40 0
+	$jointconstrain "valvebiped.bip01_l_foot" y limit -40 40 0
+	$jointconstrain "valvebiped.bip01_l_foot" z limit -55 35 0
+	$noselfcollisions
+}
+
+$sequence ragdoll 		"humans\male\ragdoll_tie" 		fps 30 		activity act_dieragdoll 1

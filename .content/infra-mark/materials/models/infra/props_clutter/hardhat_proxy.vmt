@@ -1,0 +1,74 @@
+
+vertexlitgeneric
+{
+
+	$basetexture models/infra/props_clutter/hardhat
+	$bumpmap dev/bump_normal
+	$lightwarptexture dev/identitylightwarp
+
+	$halflambert 1
+	$ambientocclusion 1
+	$ambientocclcolor "{ 235 235 235 }"
+
+	$phong 1
+	$phongexponent 5
+	$phongboost 1
+	$phongfresnelranges "[ 0.1 0.1 0.1 ]"
+
+	$rimlight 1
+	$rimlightexponent 75
+	$rimlightboost 0.1
+
+	$detail detail/metal_detail_01
+	$detailscale 8
+	$detailblendmode 0
+	$detailblendfactor 0.15
+
+	// Colour Proxy
+	
+	$blendtintbybasealpha 1 // alpha channel of $basetexture: color mask.
+ 	$blendtintcoloroverbase 0 // blend mode.
+	
+	$PhongBrightnessScalar 0.5 // see below. "0.5" will get overwritten.
+	
+	Proxies
+	{
+		PlayerColor
+		{
+			resultVar $color2 // pass the player color value to Gmod
+			default 0.23 0.35 0.41
+		}
+		Clamp // clamp the chosen color
+		{
+			min 0.2
+			max 0.9
+			srcVar1 "$color2"
+			resultVar "$color2"
+		}
+		Clamp // copy this value to phong tint
+		{
+			min 0.1
+			max 0.15
+			srcVar1 "$color2"
+			resultVar "$phongtint"
+		}
+		Equals // copy $color2 value to exterior variable. this makes it
+		{      // no longer a RGB array but a single float instead (!??)
+			srcVar1 "$color2"
+			resultVar "$PhongBrightnessScalar"
+		}
+		Multiply // multiply $phongtint by this new float value.
+		{
+			srcVar1 "$phongtint"
+			srcVar2 "$phongBrightnessScalar"
+			resultVar "$phongtint"
+		}
+		Clamp // the result of this multiply doesn't go any lower
+		{
+			min 0.25
+			max 1.0
+			srcVar1 "$phongtint"
+			resultVar "$phongtint"
+		}
+	}
+}

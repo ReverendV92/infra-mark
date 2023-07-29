@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/characters/player_body_work"
+	"$bumpmap" "models/characters/player_body_work_normal"
+
+	//$rimlight 1
+	//$rimlightboost 2
+	//$rimlightexponent 1
+
+	$phong 1
+	$phongboost 50
+	$phongexponent 5
+	$phongtint "[1 1 0.1]"
+	$phongfresnelranges "[0.1 0.5 1]"
+
+	$lightwarptexture "models/characters/player_wrp_alternative"
+}
